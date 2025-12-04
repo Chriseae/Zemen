@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Zemenai.ai - Amharic AI Assistant",
+  "description": "An Amharic-native AI inference service built on Google's Gemini API, providing culturally nuanced and contextually aware AI interactions for Amharic speakers.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
