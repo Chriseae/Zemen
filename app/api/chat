@@ -1,0 +1,33 @@
+// app/api/chat/route.js
+
+import { GoogleGenerativeAI } from "@google/genai";
+import { NextResponse } from 'next/server';
+
+// Initialize the Gemini AI client
+// It automatically looks for the GEMINI_API_KEY environment variable.
+const ai = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+
+// Define the POST handler for the API route
+export async function POST(req) {
+    try {
+        const { message } = await req.json();
+
+        // Safety check for the message content
+        if (!message) {
+            return NextResponse.json({ error: 'Message content is missing' }, { status: 400 });
+        }
+
+        // Call the Gemini model
+        const response = await ai.models.generateContent({
+            model: 'gemini-2.5-flash',
+            contents: [{ role: "user", parts: [{ text: message }] }],
+        });
+
+        // Send the AI's text response back to the client
+        return NextResponse.json({ text: response.text }, { status: 200 });
+    } catch (error) {
+        console.error('Gemini API Error:', error);
+        // Return a generic error to the client
+        return NextResponse.json({ error: 'Failed to communicate with the AI model.' }, { status: 500 });
+    }
+}
