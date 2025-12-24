@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { PlusIcon, SettingsIcon, XIcon, ZemenaiIcon, ChatBubbleIcon, BookOpenIcon, FolderIcon, ThreeDotsIcon, TrashIcon } from './Icons.tsx';
 import { useZemenaiChat } from '../hooks/useZemenaiChat.ts';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../Contexts/LanguageContext.tsx';
 import type { View } from '../App.tsx';
 
 interface SidebarProps {

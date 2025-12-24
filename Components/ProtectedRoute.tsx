@@ -1,5 +1,5 @@
 ﻿import React, { ReactNode } from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../Contexts/AuthContext';
 
 interface ProtectedRouteProps {
   children: ReactNode;
@@ -7,10 +7,10 @@ interface ProtectedRouteProps {
   requireVerification?: boolean;
 }
 
-const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
-  children, 
+const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
+  children,
   onRedirectToAuth,
-  requireVerification = false 
+  requireVerification = false
 }) => {
   const { currentUser, loading } = useAuth();
 

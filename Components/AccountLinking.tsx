@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../Contexts/AuthContext';
 import {
     GoogleAuthProvider,
     FacebookAuthProvider,
@@ -109,8 +109,8 @@ const AccountLinking: React.FC = () => {
         <div>
             {message && (
                 <div className={`mb-4 px-4 py-3 rounded ${message.includes('Successfully')
-                        ? 'bg-green-900 bg-opacity-50 border border-green-500 text-green-200'
-                        : 'bg-red-900 bg-opacity-50 border border-red-500 text-red-200'
+                    ? 'bg-green-900 bg-opacity-50 border border-green-500 text-green-200'
+                    : 'bg-red-900 bg-opacity-50 border border-red-500 text-red-200'
                     }`}>
                     {message}
                 </div>

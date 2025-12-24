@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { SendIcon, LoadingIcon, MicrophoneIcon, MicrophoneSlashIcon, PlusIcon, XCircleIcon, FileIcon, ImageIcon, AudioIcon, VideoIcon } from './Icons';
 import { Attachment } from '../types';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../Contexts/LanguageContext';
 
 interface ChatInputProps {
   input: string;
@@ -31,11 +31,11 @@ const ChatInput: React.FC<ChatInputProps> = ({ input, handleInputChange, sendMes
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if ((!input.trim() && attachments.length === 0) || isLoading || hasLoadingAttachments) return;
-    
+
     await sendMessage(input, attachments);
     setAttachments([]); // Clear attachments after sending
   };
-  
+
   const handleFileSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
       const files: File[] = Array.from(e.target.files);
@@ -51,7 +51,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ input, handleInputChange, sendMes
       }));
 
       setAttachments(prev => [...prev, ...placeholders]);
-      
+
       // Reset input immediately so change event fires even if same files selected
       if (fileInputRef.current) fileInputRef.current.value = '';
 
@@ -62,9 +62,9 @@ const ChatInput: React.FC<ChatInputProps> = ({ input, handleInputChange, sendMes
 
         try {
           const base64 = await convertToBase64(file);
-          setAttachments(prev => prev.map(att => 
-            att.id === placeholderId 
-              ? { ...att, data: base64, loading: false } 
+          setAttachments(prev => prev.map(att =>
+            att.id === placeholderId
+              ? { ...att, data: base64, loading: false }
               : att
           ));
         } catch (error) {
@@ -115,21 +115,21 @@ const ChatInput: React.FC<ChatInputProps> = ({ input, handleInputChange, sendMes
         <div className="flex flex-wrap gap-2 px-2 pb-1">
           {attachments.map(att => (
             <div key={att.id} className="relative group flex items-center gap-2 bg-gray-800 border border-gray-700 rounded-lg pl-2 pr-8 py-1.5 text-xs text-gray-300">
-               {att.loading ? (
-                 <LoadingIcon className="w-5 h-5 text-blue-400" />
-               ) : att.type === 'image' && att.data ? (
-                 <img src={att.data} alt={att.name} className="w-5 h-5 object-cover rounded" />
-               ) : (
-                 getFileIcon(att.type)
-               )}
-               <span className="truncate max-w-[120px]" title={att.name}>{att.name}</span>
-               <button 
+              {att.loading ? (
+                <LoadingIcon className="w-5 h-5 text-blue-400" />
+              ) : att.type === 'image' && att.data ? (
+                <img src={att.data} alt={att.name} className="w-5 h-5 object-cover rounded" />
+              ) : (
+                getFileIcon(att.type)
+              )}
+              <span className="truncate max-w-[120px]" title={att.name}>{att.name}</span>
+              <button
                 type="button"
                 onClick={() => removeAttachment(att.id)}
                 className="absolute right-1 top-1/2 -translate-y-1/2 text-gray-500 hover:text-red-400 p-1"
-               >
-                 <XCircleIcon className="w-4 h-4" />
-               </button>
+              >
+                <XCircleIcon className="w-4 h-4" />
+              </button>
             </div>
           ))}
         </div>
@@ -137,15 +137,15 @@ const ChatInput: React.FC<ChatInputProps> = ({ input, handleInputChange, sendMes
 
       <div className="relative">
         {/* File Input - Hidden */}
-        <input 
-          type="file" 
-          multiple 
+        <input
+          type="file"
+          multiple
           accept={ACCEPTED_FILE_TYPES}
-          ref={fileInputRef} 
-          onChange={handleFileSelect} 
-          className="hidden" 
+          ref={fileInputRef}
+          onChange={handleFileSelect}
+          className="hidden"
         />
-        
+
         {/* Attachment Button */}
         <button
           type="button"
@@ -167,7 +167,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ input, handleInputChange, sendMes
           disabled={isInputDisabled}
         />
         <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
-           <button
+          <button
             type="button"
             onClick={toggleLive}
             disabled={isLoading}

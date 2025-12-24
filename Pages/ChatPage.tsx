@@ -3,7 +3,7 @@ import ChatWindow from '../Components/ChatWindow';
 import ChatInput from '../Components/ChatInput';
 import { useZemenaiChat } from '../hooks/useZemenaiChat';
 import { ZemenaiIcon } from '../Components/Icons';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../Contexts/LanguageContext';
 
 /* -------------------------------- Icons -------------------------------- */
 const CodeIcon = ({ className = 'h-5 w-5' }) => (

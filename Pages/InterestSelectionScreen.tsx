@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
-import { CheckCircleIcon, SparklesIcon, CpuIcon, BookOpenIcon, UserIcon } from '../components/Icons';
+import { useLanguage } from '../Contexts/LanguageContext';
+import { CheckCircleIcon, SparklesIcon, CpuIcon, BookOpenIcon, UserIcon } from '../Components/Icons';
 
 interface InterestSelectionScreenProps {
   onComplete: () => void;
@@ -61,8 +61,8 @@ const InterestSelectionScreen: React.FC<InterestSelectionScreenProps> = ({ onCom
                 key={item.id}
                 onClick={() => handleToggle(item.id)}
                 className={`relative flex flex-col items-center justify-center p-6 rounded-2xl border transition-all duration-200 aspect-square
-                  ${isSelected 
-                    ? 'bg-blue-600/10 border-blue-500 text-blue-400' 
+                  ${isSelected
+                    ? 'bg-blue-600/10 border-blue-500 text-blue-400'
                     : 'bg-gray-900 border-gray-800 text-gray-400 hover:border-gray-600 hover:bg-gray-800'
                   }`}
               >
@@ -71,7 +71,7 @@ const InterestSelectionScreen: React.FC<InterestSelectionScreenProps> = ({ onCom
                     <CheckCircleIcon className="w-5 h-5" filled />
                   </div>
                 )}
-                
+
                 <div className={`mb-3 ${isSelected ? 'text-blue-400' : 'text-gray-500'}`}>
                   {item.icon}
                 </div>

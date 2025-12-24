@@ -14,8 +14,8 @@ import ReferralPage from './Pages/ReferralPage';
 import ProfilePage from './Pages/ProfilePage';
 import { MenuIcon } from './Components/Icons';
 import { ChatProvider } from './hooks/useZemenaiChat';
-import { LanguageProvider } from './contexts/LanguageContext';
-import { AuthProvider } from './contexts/AuthContext';
+import { LanguageProvider } from './Contexts/LanguageContext';
+import { AuthProvider } from './Contexts/AuthContext';
 import ProtectedRoute from './Components/ProtectedRoute';
 import EmailVerificationBanner from './Components/EmailVerificationBanner';
 

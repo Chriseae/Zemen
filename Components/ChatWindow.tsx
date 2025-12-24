@@ -1,15 +1,15 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import type { Message, Attachment } from '../types';
-import { 
-  CopyIcon, 
-  CheckIcon, 
-  ThumbUpIcon, 
-  ThumbDownIcon, 
-  ShareIcon, 
-  SpeakerIcon, 
+import {
+  CopyIcon,
+  CheckIcon,
+  ThumbUpIcon,
+  ThumbDownIcon,
+  ShareIcon,
+  SpeakerIcon,
   StopIcon,
-  ThreeDotsIcon, 
+  ThreeDotsIcon,
   FlagIcon,
   LoadingIcon,
   FileIcon,
@@ -17,7 +17,7 @@ import {
   VideoIcon
 } from './Icons';
 import { generateAmharicSpeech, playAudioBuffer } from '../services/ConversationAccess';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../Contexts/LanguageContext';
 
 interface ChatWindowProps {
   messages: Message[];
@@ -34,9 +34,8 @@ const ActionButton: React.FC<{
   <button
     onClick={onClick}
     disabled={disabled}
-    className={`p-1.5 rounded-md transition-all duration-200 hover:bg-gray-700 ${
-      active ? 'text-blue-400 bg-gray-700/50' : 'text-gray-400 hover:text-gray-200'
-    } ${danger ? 'hover:text-red-400' : ''} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+    className={`p-1.5 rounded-md transition-all duration-200 hover:bg-gray-700 ${active ? 'text-blue-400 bg-gray-700/50' : 'text-gray-400 hover:text-gray-200'
+      } ${danger ? 'hover:text-red-400' : ''} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
     title={label}
     aria-label={label}
   >
@@ -151,11 +150,10 @@ const MessageItem: React.FC<{ message: Message }> = ({ message }) => {
     <div className={`group relative flex w-full ${isUser ? 'justify-end' : 'justify-start'}`}>
       <div className={`max-w-2xl relative ${isUser ? 'ml-12' : 'mr-12'}`}>
         <div
-          className={`p-4 rounded-2xl shadow-md text-base ${
-            isUser
+          className={`p-4 rounded-2xl shadow-md text-base ${isUser
               ? 'bg-blue-600 text-white rounded-br-none'
               : 'bg-gray-800 text-gray-200 rounded-bl-none'
-          }`}
+            }`}
         >
           {/* Attachments */}
           {message.attachments && message.attachments.length > 0 && (
@@ -172,53 +170,53 @@ const MessageItem: React.FC<{ message: Message }> = ({ message }) => {
         {/* Action Bar */}
         {!isUser && message.content.length > 0 && (
           <div className="flex items-center gap-1 mt-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200 px-1">
-             <ActionButton 
-              onClick={handleSpeak} 
+            <ActionButton
+              onClick={handleSpeak}
               icon={
-                isLoadingAudio ? <LoadingIcon className="w-4 h-4" /> : 
-                isPlaying ? <StopIcon className="w-4 h-4 text-blue-400" /> : 
-                <SpeakerIcon className="w-4 h-4" />
-              } 
+                isLoadingAudio ? <LoadingIcon className="w-4 h-4" /> :
+                  isPlaying ? <StopIcon className="w-4 h-4 text-blue-400" /> :
+                    <SpeakerIcon className="w-4 h-4" />
+              }
               label={t('chat.actions.readAloud')}
               active={isPlaying}
               disabled={isLoadingAudio}
             />
-            <ActionButton 
-              onClick={handleCopy} 
-              icon={copied ? <CheckIcon className="w-4 h-4 text-green-400" /> : <CopyIcon className="w-4 h-4" />} 
+            <ActionButton
+              onClick={handleCopy}
+              icon={copied ? <CheckIcon className="w-4 h-4 text-green-400" /> : <CopyIcon className="w-4 h-4" />}
               label={t('chat.actions.copy')}
             />
             <div className="w-px h-3 bg-gray-700 mx-1" />
-            <ActionButton 
-              onClick={() => handleFeedback('up')} 
-              icon={<ThumbUpIcon className="w-4 h-4" filled={feedback === 'up'} />} 
+            <ActionButton
+              onClick={() => handleFeedback('up')}
+              icon={<ThumbUpIcon className="w-4 h-4" filled={feedback === 'up'} />}
               label={t('chat.actions.goodResponse')}
               active={feedback === 'up'}
             />
-            <ActionButton 
-              onClick={() => handleFeedback('down')} 
-              icon={<ThumbDownIcon className="w-4 h-4" filled={feedback === 'down'} />} 
+            <ActionButton
+              onClick={() => handleFeedback('down')}
+              icon={<ThumbDownIcon className="w-4 h-4" filled={feedback === 'down'} />}
               label={t('chat.actions.badResponse')}
               active={feedback === 'down'}
             />
             <div className="w-px h-3 bg-gray-700 mx-1" />
-            <ActionButton 
-              onClick={handleShare} 
-              icon={<ShareIcon className="w-4 h-4" />} 
+            <ActionButton
+              onClick={handleShare}
+              icon={<ShareIcon className="w-4 h-4" />}
               label={t('chat.actions.share')}
             />
-            
+
             <div className="relative" ref={menuRef}>
-              <ActionButton 
-                onClick={() => setMenuOpen(!menuOpen)} 
-                icon={<ThreeDotsIcon className="w-4 h-4" />} 
+              <ActionButton
+                onClick={() => setMenuOpen(!menuOpen)}
+                icon={<ThreeDotsIcon className="w-4 h-4" />}
                 label={t('chat.actions.more')}
                 active={menuOpen}
               />
-              
+
               {menuOpen && (
                 <div className="absolute bottom-full left-0 mb-2 w-40 bg-gray-900 border border-gray-700 rounded-lg shadow-xl z-10 overflow-hidden">
-                  <button 
+                  <button
                     onClick={() => {
                       console.log('Reported:', message.id);
                       setMenuOpen(false);
@@ -238,10 +236,10 @@ const MessageItem: React.FC<{ message: Message }> = ({ message }) => {
         {/* Minimal User Actions */}
         {isUser && (
           <div className="flex items-center justify-end gap-1 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 px-1">
-            <ActionButton 
-              onClick={handleCopy} 
-              icon={copied ? <CheckIcon className="w-4 h-4 text-green-400" /> : <CopyIcon className="w-4 h-4" />} 
-              label={t('chat.actions.copy')} 
+            <ActionButton
+              onClick={handleCopy}
+              icon={copied ? <CheckIcon className="w-4 h-4 text-green-400" /> : <CopyIcon className="w-4 h-4" />}
+              label={t('chat.actions.copy')}
             />
           </div>
         )}
