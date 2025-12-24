@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { SettingsIcon, UserIcon, BellIcon, ShieldIcon, CpuIcon, TrashIcon, BulbIcon } from '../components/Icons';
-import { useLanguage } from '../contexts/LanguageContext';
+import { SettingsIcon, UserIcon, BellIcon, ShieldIcon, CpuIcon, TrashIcon, BulbIcon } from '../Components/Icons';
+import { useLanguage } from '../Contexts/LanguageContext';
 import { ETHIOPIAN_LANGUAGES, Language, getStatusIcon } from '../locales/ethiopianLanguages';
 
 const SettingsSection: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (

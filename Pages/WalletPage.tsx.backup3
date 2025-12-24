@@ -1,5 +1,5 @@
 ﻿import React, { useState, useEffect } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../Contexts/LanguageContext';
 
 // ZMX Transaction types
 type TransactionType = 'reward' | 'purchase' | 'ai_training' | 'referral' | 'stake' | 'unstake' | 'transfer_in' | 'transfer_out';

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ZemenaiIcon, CheckIcon, SponsorLogo } from '../components/Icons';
-import { useLanguage } from '../contexts/LanguageContext';
+import { ZemenaiIcon, CheckIcon, SponsorLogo } from '../Components/Icons';
+import { useLanguage } from '../Contexts/LanguageContext';
 
 interface LandingPageProps {
     onStart: () => void;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
-import { useAuth } from '../contexts/AuthContext';
+import { useLanguage } from '../Contexts/LanguageContext';
+import { useAuth } from '../Contexts/AuthContext';
 import { db } from '../config/firebase';
 import {
     collection,

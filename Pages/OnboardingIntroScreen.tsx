@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
-import { SparklesIcon, ShieldIcon, TuneIcon } from '../components/Icons';
+import { useLanguage } from '../Contexts/LanguageContext';
+import { SparklesIcon, ShieldIcon, TuneIcon } from '../Components/Icons';
 
 interface OnboardingIntroScreenProps {
   onConfirm: () => void;
@@ -44,7 +44,7 @@ const OnboardingIntroScreen: React.FC<OnboardingIntroScreenProps> = ({ onConfirm
   return (
     <div className="min-h-screen bg-gray-950 flex flex-col items-center justify-center p-6 text-center">
       <div className="max-w-xl w-full space-y-8">
-        
+
         {/* Header */}
         <h1 className={`text-3xl md:text-4xl font-bold text-white mb-2 ${fontClass}`}>
           {t('onboarding.intro.title')}
@@ -52,17 +52,17 @@ const OnboardingIntroScreen: React.FC<OnboardingIntroScreenProps> = ({ onConfirm
 
         {/* Content Blocks */}
         <div className="space-y-6 bg-gray-900/50 p-6 md:p-8 rounded-2xl border border-gray-800">
-          <InfoBlock 
+          <InfoBlock
             icon={<SparklesIcon className="w-6 h-6" />}
             title={t('onboarding.intro.blocks.ask.title')}
             desc={t('onboarding.intro.blocks.ask.description')}
           />
-          <InfoBlock 
+          <InfoBlock
             icon={<ShieldIcon className="w-6 h-6" />}
             title={t('onboarding.intro.blocks.safety.title')}
             desc={t('onboarding.intro.blocks.safety.description')}
           />
-          <InfoBlock 
+          <InfoBlock
             icon={<TuneIcon className="w-6 h-6" />}
             title={t('onboarding.intro.blocks.improve.title')}
             desc={t('onboarding.intro.blocks.improve.description')}
@@ -75,17 +75,15 @@ const OnboardingIntroScreen: React.FC<OnboardingIntroScreenProps> = ({ onConfirm
             </span>
             <button
               onClick={handleToggle}
-              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${
-                allowTraining ? 'bg-blue-600' : 'bg-gray-700'
-              }`}
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${allowTraining ? 'bg-blue-600' : 'bg-gray-700'
+                }`}
               role="switch"
               aria-checked={allowTraining}
               aria-label={t('onboarding.intro.toggleLabel')}
             >
               <span
-                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                  allowTraining ? 'translate-x-6' : 'translate-x-1'
-                }`}
+                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${allowTraining ? 'translate-x-6' : 'translate-x-1'
+                  }`}
               />
             </button>
           </div>
