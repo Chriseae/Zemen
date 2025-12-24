@@ -37,7 +37,6 @@ const WalletPage: React.FC = () => {
   const [recipientEmail, setRecipientEmail] = useState('');
   const [sendError, setSendError] = useState<string | null>(null);
   const [validatingEmail, setValidatingEmail] = useState(false);
-  const [activeFilter, setActiveFilter] = useState<'all' | 'incoming' | 'outgoing' | 'rewards'>('all');
 
   // API configuration
   const API_URL = process.env.NODE_ENV === 'production'
@@ -364,32 +363,6 @@ const WalletPage: React.FC = () => {
       : 'text-red-400';
   };
 
-  const filterTransactions = (transactions: Transaction[]) => {
-    switch (activeFilter) {
-      case 'incoming':
-        return transactions.filter(tx =>
-          ['reward', 'purchase', 'ai_training', 'referral', 'transfer_in', 'unstake'].includes(tx.type)
-        );
-      case 'outgoing':
-        return transactions.filter(tx =>
-          ['transfer_out', 'stake'].includes(tx.type)
-        );
-      case 'rewards':
-        return transactions.filter(tx =>
-          ['reward', 'ai_training', 'referral'].includes(tx.type)
-        );
-      default:
-        return transactions;
-    }
-  };
-
-  const filters = [
-    { key: 'all' as const, labelEn: 'All', labelAm: 'ሁሉም' },
-    { key: 'incoming' as const, labelEn: 'Incoming', labelAm: 'ገቢ' },
-    { key: 'outgoing' as const, labelEn: 'Outgoing', labelAm: 'ወጪ' },
-    { key: 'rewards' as const, labelEn: 'Rewards', labelAm: 'ሽልማት' }
-  ];
-
   return (
     <div className="flex-1 overflow-y-auto bg-gray-900 p-4 md:p-6">
       <div className="max-w-4xl mx-auto space-y-6">
@@ -486,25 +459,9 @@ const WalletPage: React.FC = () => {
         {/* Transaction History */}
         <div className="bg-gray-800 rounded-xl border border-gray-700">
           <div className="p-4 md:p-6 border-b border-gray-700">
-            <h2 className={`text-xl font-bold text-white mb-4 ${fontClass}`}>
+            <h2 className={`text-xl font-bold text-white ${fontClass}`}>
               {language === 'am' ? 'የቀደሞ ልውውጥ ገጽታ' : 'Transaction History'}
             </h2>
-
-            {/* Filter Buttons */}
-            <div className="flex gap-2 flex-wrap">
-              {filters.map((filter) => (
-                <button
-                  key={filter.key}
-                  onClick={() => setActiveFilter(filter.key)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${fontClass} ${activeFilter === filter.key
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                    }`}
-                >
-                  {language === 'am' ? filter.labelAm : filter.labelEn}
-                </button>
-              ))}
-            </div>
           </div>
 
           <div className="divide-y divide-gray-700">
@@ -513,7 +470,7 @@ const WalletPage: React.FC = () => {
                 {language === 'am' ? 'ምንም ግብይት የለም' : 'No transactions yet'}
               </div>
             ) : (
-              filterTransactions(walletData.transactions).map((tx) => (
+              walletData.transactions.map((tx) => (
                 <div key={tx.id} className="p-4 md:p-6 hover:bg-gray-750 transition-colors">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-xl">

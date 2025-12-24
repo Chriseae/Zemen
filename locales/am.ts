@@ -82,85 +82,85 @@ const am: TranslationResource = {
       files: "ፋይሎች",
     },
     status: {
-        active: "ንቁ",
-        archived: "የተቀመጠ"
+      active: "ንቁ",
+      archived: "የተቀመጠ"
     }
   },
   wallet: {
     title: "የቦርሳ አጠቃላይ እይታ",
     balance: {
-        available: "ያለውት ቀሪ ሂሳብ",
-        equivalent: "≈ $42.60 USD"
+      available: "ያለውት ቀሪ ሂሳብ",
+      equivalent: "≈ $42.60 USD"
     },
     actions: {
-        send: "ላክ",
-        receive: "ተቀበል",
-        buy: "ZSC ይግዙ"
+      send: "ላክ",
+      receive: "ተቀበል",
+      buy: "ZMX ይግዙ"
     },
     transactions: {
-        title: "እንቅስቃሴዎች",
-        filters: {
-            all: "ሁሉም",
-            incoming: "ገቢ",
-            outgoing: "ወጪ",
-            rewards: "ሽልማቶች"
-        },
-        empty: "ምንም እንቅስቃሴ የለም።",
-        status: {
-            completed: "ተጠናቀቀ",
-            pending: "በመጠባበቅ ላይ",
-            failed: "አልተሳካም"
-        }
+      title: "እንቅስቃሴዎች",
+      filters: {
+        all: "ሁሉም",
+        incoming: "ገቢ",
+        outgoing: "ወጪ",
+        rewards: "ሽልማቶች"
+      },
+      empty: "ምንም እንቅስቃሴ የለም።",
+      status: {
+        completed: "ተጠናቀቀ",
+        pending: "በመጠባበቅ ላይ",
+        failed: "አልተሳካም"
+      }
     },
     sendModal: {
-        title: "ZSC ላክ",
-        recipient: "የተቀባይ አድራሻ",
-        amount: "መጠን (ZSC)",
-        note: "ማስታወሻ (አማራጭ)",
-        submit: "አሁን ላክ"
+      title: "ZMX ላክ",
+      recipient: "የተቀባይ አድራሻ",
+      amount: "መጠን (ZMX)",
+      note: "ማስታወሻ (አማራጭ)",
+      submit: "አሁን ላክ"
     },
     receiveModal: {
-        title: "ZSC ተቀበል",
-        addressLabel: "የቦርሳ አድራሻዎ",
-        copy: "አድራሻ ቅዳ",
-        share: "አድራሻ አጋራ",
-        note: "ይህ የእርስዎ የግል የዘመናይ ቼይን ቦርሳ አድራሻ ነው።"
+      title: "ZMX ተቀበል",
+      addressLabel: "የቦርሳ አድራሻዎ",
+      copy: "አድራሻ ቅዳ",
+      share: "አድራሻ አጋራ",
+      note: "ይህ የእርስዎ የግል የዘመናይ ቼይን ቦርሳ አድራሻ ነው።"
     }
   },
   referrals: {
     title: "የግብዣ ዳሽቦርድ",
     stats: {
-        earnings: "ጠቅላላ ገቢ",
-        active: "ንቁ ግብዣዎች",
-        pending: "በመጠባበቅ ላይ ያሉ",
-        rank: "ደረጃ"
+      earnings: "ጠቅላላ ገቢ",
+      active: "ንቁ ግብዣዎች",
+      pending: "በመጠባበቅ ላይ ያሉ",
+      rank: "ደረጃ"
     },
     linkBox: {
-        label: "የእርስዎ የመጋበዣ ሊንክ",
-        copy: "ሊንክ ቅዳ",
-        copied: "ተቀድቷል!",
-        share: "አጋራ",
-        footer: "ሊንኩን ለስራ ምሥጥሮች እና ጓደኞች ያጋሩ።"
+      label: "የእርስዎ የመጋበዣ ሊንክ",
+      copy: "ሊንክ ቅዳ",
+      copied: "ተቀድቷል!",
+      share: "አጋራ",
+      footer: "ሊንኩን ለስራ ምሥጥሮች እና ጓደኞች ያጋሩ።"
     },
     rewards: {
-        title: "የሽልማት ደረጃዎች",
-        signup: "ምዝገባ",
-        pro: "Pro ሲገዙ",
-        max: "Max ሲገዙ"
+      title: "የሽልማት ደረጃዎች",
+      signup: "ምዝገባ",
+      pro: "Pro ሲገዙ",
+      max: "Max ሲገዙ"
     },
     table: {
-        title: "የግብዣ እንቅስቃሴ",
-        cols: {
-            friend: "ጓደኛ",
-            date: "ቀን",
-            plan: "ፕላን",
-            reward: "ሽልማት",
-            status: "ምናታ"
-        }
+      title: "የግብዣ እንቅስቃሴ",
+      cols: {
+        friend: "ጓደኛ",
+        date: "ቀን",
+        plan: "ፕላን",
+        reward: "ሽልማት",
+        status: "ምናታ"
+      }
     },
     cta: {
-        text: "የአፍሪካን ኤአይ ወደፊት ለመቅረጽ ያግዙ። ለሚጋብዙት እያንዳንዱ ጓደኛ ZSC ያግኙ።",
-        button: "ሊንክን አጋራ"
+      text: "የአፍሪካን ኤአይ ወደፊት ለመቅረጽ ያግዙ። ለሚጋብዙት እያንዳንዱ ጓደኛ ZMX ያግኙ።",
+      button: "ሊንክን አጋራ"
     }
   },
   settings: {
@@ -172,6 +172,7 @@ const am: TranslationResource = {
     },
     labels: {
       account: "መለያ",
+      motherTongue: "የአፍ መፍቻ ቋንቋ",
       theme: "ገጽታ",
       language: "ቋንቋ",
       aiModel: "ኤአይ ሞዴል",
@@ -185,59 +186,64 @@ const am: TranslationResource = {
     hero: {
       title: "ዘመናይ",
       subtitle: "የእርስዎ የአማርኛ ኤአይ ረዳት",
-      cta: "መተግበሪያውን ይጀምሩ"
+      cta: "በነጻ ይጀምሩ"
     },
     pricing: {
-      title: "ከፍላጎትዎ ጋር የሚያድግ ዋጋ።",
-      subtitle: "ስራዎን የሚያጎለብት እቅድ ይምረጡ — ከቀላል ውይይት እስከ የላቀ ምርምር እና አውቶሜሽን።",
+      title: "ከፍላጎትዎ ጋር የሚያድግ እሴት",
+      subtitle: "ስራዎን የሚያጎለብት እቅድ ይምረጡ — ከቀላል ውይይት እስከ የላቀ ምርምር እና አውቶሜሽን",
       monthly: "በወር",
       yearly: "በዓመት",
       saveBadge: "17% ይቆጥቡ",
       billedMonthly: "በየወሩ የሚከፈል",
       billedAnnually: "በዓመቱ የሚከፈል",
       plan_free: {
-        title: "ነፃ",
+        title: "ስታርተር",
         subtitle: "ከዘመናይ ጋር ይተዋወቁ",
         price: "$0",
         features: [
           "በድረ-ገጽ፣ iOS እና Android ከዘመናይ ጋር ይወያዩ",
-          "ይጻፉ፣ ያርትዑ እና ይፍጠሩ",
+          "ይጻፉ፣ ያርቅቁ እና ይፍጠሩ",
           "ጽሁፎችን ይተንትኑ እና ምስሎችን ይጫኑ",
-          "ኮድ ያመንጩ እና መረጃዎችን በምስል ይግለጹ",
-          "የድር ፍለጋ ውጤቶችን በውይይት ውስጥ ያግኙ"
+          "ኮድ ያመንጩ እንዲሁም መረጃዎችን በምስል ይግለጹ",
+          "በየቀኑ በመጠቀም ተጨማሪ ጥቅም ያግኙ",
+          "ተግባራትን በማጠናቀቅ ትርፋማ ይሁኑ",
+          "የእውቀት ቤተ-መጽሐፍትን በመጠቀም ይዘምኑ",
+          "ሰዎችን በመጋበዝ ተጨማሪ ዕድሎችን ያግኙ"
         ],
-        cta: "መተግበሪያውን ይጀምሩ"
+        cta: "ስታርተርን ያግኙ"
       },
       plan_pro: {
         title: "ፕሮ",
         subtitle: "ምርምር፣ ኮድ እና ማደራጀት",
-        monthlyPrice: "$20",
-        yearlyPrice: "$17",
+        monthlyPrice: "$12",
+        yearlyPrice: "$9.96",
         features: [
-          "ከነፃው የበለጠ አጠቃቀም*",
+          "በነጻ ውስጥ ካሉት እሴቶች በተጨማሪ የሚከተሉት ይኖሩታል",
           "ተጨማሪ የዘመናይ ሞዴሎችን ማግኘት",
           "ያልተገደቡ ፕሮጀክቶች ውይይቶችን ለማደራጀት",
           "ጥልቅ የምርምር መሳሪያዎችን ይክፈቱ",
           "ለተወሳሰቡ ስራዎች የተራዘመ ማሰብን ይጠቀሙ",
-          "Google Workspaceን ያገናኙ፡ ኢሜይል፣ ቀን መቁጠሪያ እና ሰነዶች",
           "ከሩቅ MCP ጋር ውህደቶች",
-          "የዘመናይ ኮድን ያካትታል"
+          "የማጠናቀቂያ ማበረታቻዎች ያካትታል"
         ],
-        cta: "Go Pro"
+        cta: "ፕሮን ያግኙ"
       },
       plan_max: {
-        title: "ማክስ",
+        title: "እንተርፕራይዝ",
         subtitle: "ከፍተኛ ገደቦች፣ ቅድሚያ ማግኘት",
-        monthlyPrice: "ከ $120",
-        yearlyPrice: "ከ $100",
+        monthlyPrice: "ከ $60",
+        yearlyPrice: "ከ $49.8",
         features: [
-          "ከፕሮ 5x ወይም 20x የበለጠ አጠቃቀም ይምረጡ*",
+          "በፕሮ ውስጥ ካሉት እሴትቶች በተጨማሪ የሚከተሉት ይኖሩታል",
           "ለሁሉም ተግባራት ከፍተኛ የውጤት ገደቦች",
           "ለላቁ የዘመናይ ባህሪያት ቀድሞ ማግኘት",
+          "ከፍተኛ ዋጋ ያላቸው የሽልማት ነጥቦች",
+          "ትላልቅ ፋይሎችን ማስተዳደር",
+          "የሪፈራል ሱፐር-ጉርሻ",
           "በትራፊክ መጨናነቅ ጊዜ ቅድሚያ ማግኘት",
-          "የዘመናይ ኮድን ያካትታል"
+          "10x የማጠናቀቂያ ማበረታቻዎች ያካትታል"
         ],
-        cta: "Go Max"
+        cta: "እንተርፕራይዝ ያግኙ"
       }
     }
   },
@@ -259,7 +265,7 @@ const am: TranslationResource = {
   },
   onboarding: {
     interests: {
-      title: "ወደ ዘመናይ በደህና መጡ",
+      title: "እንኳን ወደ ዘመናይ በደህና መጡ",
       subtitle: "ልምድዎን ለእርስዎ ተስማሚ ለማድረግ 3 ፍላጎቶችን ይምረጡ።",
       items: {
         creative: "ምጥረ ጽሁፍ",
@@ -273,7 +279,7 @@ const am: TranslationResource = {
       }
     },
     intro: {
-      title: "ዘመናይ መለያ ይፍጠሩ",
+      title: "የዘመናይ መለያ ይፍጠሩ",
       blocks: {
         ask: { title: "የሆነ ነገር ማወቅ ይፈልጋሉ? ብቻ ይጠይቁ", description: "ስለ ማንኛውም ነገር ከእኔ ጋር ይወያዩ—ከቀላል ጥያቄዎች እስከ ውስብስብ ሀሳቦች። ሁሌም ለመርዳት ዝግጁ ነኝ።" },
         safety: { title: "እና ለመርዳት እንጂ ለመጉዳት አልተመረኩም", description: "ራስ-ሰር መከላከያዎች ንግግራቻችንን ከአደገኛ፣ ከስድብ ወይም ከአታላይ ይዘት ይጠብቃሉ።" },

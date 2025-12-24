@@ -83,85 +83,85 @@ const en: TranslationResource = {
       files: "Files",
     },
     status: {
-        active: "Active",
-        archived: "Archived"
+      active: "Active",
+      archived: "Archived"
     }
   },
   wallet: {
     title: "Wallet Overview",
     balance: {
-        available: "Available Balance",
-        equivalent: "≈ $42.60 USD (Soft Peg)"
+      available: "Available Balance",
+      equivalent: "≈ $42.60 USD (Soft Peg)"
     },
     actions: {
-        send: "Send",
-        receive: "Receive",
-        buy: "Buy ZSC"
+      send: "Send",
+      receive: "Receive",
+      buy: "Buy ZMX"
     },
     transactions: {
-        title: "Transactions",
-        filters: {
-            all: "All",
-            incoming: "Incoming",
-            outgoing: "Outgoing",
-            rewards: "Rewards"
-        },
-        empty: "No transactions yet.",
-        status: {
-            completed: "Completed",
-            pending: "Pending",
-            failed: "Failed"
-        }
+      title: "Transactions",
+      filters: {
+        all: "All",
+        incoming: "Incoming",
+        outgoing: "Outgoing",
+        rewards: "Rewards"
+      },
+      empty: "No transactions yet.",
+      status: {
+        completed: "Completed",
+        pending: "Pending",
+        failed: "Failed"
+      }
     },
     sendModal: {
-        title: "Send ZSC",
-        recipient: "Recipient Address",
-        amount: "Amount (ZSC)",
-        note: "Note (Optional)",
-        submit: "Send Now"
+      title: "Send ZMX",
+      recipient: "Recipient Address",
+      amount: "Amount (ZMX)",
+      note: "Note (Optional)",
+      submit: "Send Now"
     },
     receiveModal: {
-        title: "Receive ZSC",
-        addressLabel: "Your Wallet Address",
-        copy: "Copy Address",
-        share: "Share Address",
-        note: "This is your personal ZemenAI chain wallet address."
+      title: "Receive ZMX",
+      addressLabel: "Your Wallet Address",
+      copy: "Copy Address",
+      share: "Share Address",
+      note: "This is your personal ZemenAI chain wallet address."
     }
   },
   referrals: {
     title: "Referral Dashboard",
     stats: {
-        earnings: "Total Earnings",
-        active: "Active Referrals",
-        pending: "Pending Rewards",
-        rank: "Rank"
+      earnings: "Total Earnings",
+      active: "Active Referrals",
+      pending: "Pending Rewards",
+      rank: "Rank"
     },
     linkBox: {
-        label: "Your Referral Link",
-        copy: "Copy Link",
-        copied: "Copied!",
-        share: "Share",
-        footer: "Share your link with entrepreneurs, creators, and founders."
+      label: "Your Referral Link",
+      copy: "Copy Link",
+      copied: "Copied!",
+      share: "Share",
+      footer: "Share your link with entrepreneurs, creators, and founders."
     },
     rewards: {
-        title: "Reward Tiers",
-        signup: "Sign-up",
-        pro: "Buy Pro",
-        max: "Buy Max"
+      title: "Reward Tiers",
+      signup: "Sign-up",
+      pro: "Buy Pro",
+      max: "Buy Max"
     },
     table: {
-        title: "Referral Activity",
-        cols: {
-            friend: "Friend",
-            date: "Date",
-            plan: "Plan",
-            reward: "Reward",
-            status: "Status"
-        }
+      title: "Referral Activity",
+      cols: {
+        friend: "Friend",
+        date: "Date",
+        plan: "Plan",
+        reward: "Reward",
+        status: "Status"
+      }
     },
     cta: {
-        text: "Help shape the future of African AI. Earn ZSC for every friend you bring into the ecosystem.",
-        button: "Share My Link"
+      text: "Help shape the future of African AI. Earn ZMX for every friend you bring into the ecosystem.",
+      button: "Share My Link"
     }
   },
   settings: {
@@ -173,6 +173,7 @@ const en: TranslationResource = {
     },
     labels: {
       account: "Account",
+      motherTongue: "Mother Tongue",
       theme: "Theme",
       language: "Language",
       aiModel: "AI Model",
@@ -186,7 +187,7 @@ const en: TranslationResource = {
     hero: {
       title: "ZemenAI",
       subtitle: "Your Amharic AI Assistant",
-      cta: "Launch App"
+      cta: "Strat For Free"
     },
     pricing: {
       title: "Pricing that grows with your needs.",
@@ -197,7 +198,7 @@ const en: TranslationResource = {
       billedMonthly: "billed monthly",
       billedAnnually: "billed annually",
       plan_free: {
-        title: "Free",
+        title: "Starter",
         subtitle: "Meet ZemenAI",
         price: "$0",
         features: [
@@ -205,40 +206,47 @@ const en: TranslationResource = {
           "Write, edit, and create content",
           "Analyze text and upload images",
           "Generate code and visualize data",
-          "Get web search results inside chat"
+          "Maintain consistency and earn ZMX by using it daily",
+          "Earn by completing tasks",
+          "Stay updated by using the knowledge library",
+          "Get more opportunities by inviting people"
         ],
-        cta: "Launch App"
+        cta: "Launch Starter"
       },
       plan_pro: {
         title: "Pro",
         subtitle: "Research, code, and organize",
-        monthlyPrice: "$20",
-        yearlyPrice: "$17",
+        monthlyPrice: "$12",
+        yearlyPrice: "$9.96",
         features: [
-          "More usage than Free*",
+          "In addition to the features in the Starter plan, you will also have:",
           "Access more ZemenAI models",
           "Unlimited Projects to organize chats",
-          "Unlock deep Research tools",
-          "Use extended thinking for complex work",
+          "Unlock advanced research tools",
+          "Utilize extended reasoning for complex tasks",
           "Connect Google Workspace: email, calendar, and docs",
           "Integrations with remote MCP",
-          "Includes ZemenAI Code"
+          "Includes completion boosts"
         ],
         cta: "Go Pro"
       },
       plan_max: {
-        title: "Max",
+        title: "Enterprise",
         subtitle: "Higher limits, priority access",
-        monthlyPrice: "From $120",
-        yearlyPrice: "From $100",
+        monthlyPrice: "From $60",
+        yearlyPrice: "From $49.8",
         features: [
-          "Choose 5× or 20× more usage than Pro*",
+          "In addition to the features in Pro, you will have:",
           "Higher output limits for all tasks",
           "Early access to advanced ZemenAI features",
           "Priority access at high traffic times",
-          "Includes ZemenAI Code"
+          "Higher value reward points",
+          "Manage larger files",
+          "Referral super-bonus",
+          "Priority access during traffic congestion",
+          "Includes 10x Completion Boosts"
         ],
-        cta: "Go Max"
+        cta: "Go Enterprise"
       }
     }
   },
@@ -260,7 +268,7 @@ const en: TranslationResource = {
   },
   onboarding: {
     interests: {
-      title: "What brings you to ZemenAI?",
+      title: "Welcome to ZemenAI?",
       subtitle: "Select 3 interests to help us personalize your experience.",
       items: {
         creative: "Creative Writing",

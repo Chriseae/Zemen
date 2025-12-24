@@ -12,7 +12,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onStart, onNavigate }) => {
     const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
     const fontClass = language === 'am' ? 'font-amharic' : '';
 
-    const handleCheckout = (plan: 'pro' | 'max') => {
+    const handleCheckout = (plan: 'pro' | 'enterprise') => {
         onNavigate('checkout', { plan, billing: billingCycle });
     }
 
@@ -159,7 +159,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onStart, onNavigate }) => {
                             ))}
                         </ul>
                         <button
-                            onClick={() => handleCheckout('max')}
+                            onClick={() => handleCheckout('enterprise')}
                             className={`w-full py-2.5 rounded-lg border border-gray-700 hover:bg-gray-800 transition-colors text-white font-medium ${fontClass}`}
                         >
                             {t('landing.pricing.plan_max.cta')}
@@ -171,11 +171,11 @@ const LandingPage: React.FC<LandingPageProps> = ({ onStart, onNavigate }) => {
                 <div className="w-full border-t border-gray-900 bg-gray-950 py-12">
                     <div className="max-w-6xl mx-auto px-6 text-center">
                         <div className="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                            <SponsorLogo name="HADERO" className="text-xl text-gray-400" />
-                            <SponsorLogo name="OVID" className="text-xl text-gray-400" />
-                            <SponsorLogo name="BOON" className="text-xl text-gray-400" />
-                            <SponsorLogo name="CALDI" className="text-xl text-gray-400" />
-                            <SponsorLogo name="FIGTREE" className="text-xl text-gray-400" />
+                            <SponsorLogo name="HADERO" className="text-xl text-gray-200" />
+                            <SponsorLogo name="OVID" className="text-xl text-gray-200" />
+                            <SponsorLogo name="BOON" className="text-xl text-gray-200" />
+                            <SponsorLogo name="BELESI" className="text-xl text-gray-200" />
+                            <SponsorLogo name="FIGTREE" className="text-xl text-gray-200" />
                         </div>
                     </div>
                 </div>
