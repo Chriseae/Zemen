@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import ChatWindow from '../components/ChatWindow';
-import ChatInput from '../components/ChatInput';
+import ChatWindow from '../Components/ChatWindow';
+import ChatInput from '../Components/ChatInput';
 import { useZemenaiChat } from '../hooks/useZemenaiChat';
 import { ZemenaiIcon } from '../components/Icons';
 import { useLanguage } from '../contexts/LanguageContext';
