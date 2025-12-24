@@ -1,6 +1,6 @@
 ﻿import React, { useState } from 'react';
-import Sidebar from './Components/Sidebar'; // Change to capital C
-import ChatPage from './Pages/ChatPage';       // Change to capital P
+import Sidebar from './Components/Sidebar';
+import ChatPage from './Pages/ChatPage';
 import KnowledgeLibraryPage from './Pages/KnowledgeLibraryPage';
 import ProjectsPage from './Pages/ProjectsPage';
 import SettingsPage from './Pages/SettingsPage';
@@ -12,7 +12,12 @@ import SignInSignUpScreen from './Pages/SignInSignUpScreen';
 import WalletPage from './Pages/WalletPage';
 import ReferralPage from './Pages/ReferralPage';
 import ProfilePage from './Pages/ProfilePage';
-import { MenuIcon } from './Components/Icons'; // Change to capital C
-// ... other imports ...
-import ProtectedRoute from './Components/ProtectedRoute'; // Capital C
-import EmailVerificationBanner from './Components/EmailVerificationBanner'; // Capital C
+import { MenuIcon } from './Components/Icons';
+import { ChatProvider } from './hooks/useZemenaiChat';
+import { LanguageProvider } from './contexts/LanguageContext';
+import { AuthProvider } from './contexts/AuthContext';
+import ProtectedRoute from './Components/ProtectedRoute';
+import EmailVerificationBanner from './Components/EmailVerificationBanner';
+
+// Adding 'export' here is critical for the Sidebar to work
+export type View = 'landing' | 'interests' | 'intro' | 'auth' | 'chat' | 'library' | 'projects' | 'settings' | 'checkout' | 'wallet' | 'referrals' | 'profile';
