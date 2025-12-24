@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ChatWindow from '../Components/ChatWindow';
 import ChatInput from '../Components/ChatInput';
 import { useZemenaiChat } from '../hooks/useZemenaiChat';
-import { ZemenaiIcon } from '../components/Icons';
+import { ZemenaiIcon } from '../Components/Icons';
 import { useLanguage } from '../contexts/LanguageContext';
 
 /* -------------------------------- Icons -------------------------------- */
